@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$((0x$(echo "${WATER//e/0}" | tr 'watr' '0123') + 0b$(echo "${STIR//i/0}" | tr '.' '01')))" | tr '0123456789' 'bestchol'
+echo "ibase=water;obase=bestchol;$(echo "${WATER}" | tr -dc '0-9')+$(echo "${STIR}" | tr -dc '0-9')" | bc
